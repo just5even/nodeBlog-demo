@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <style>
+        .layui-nav-item:nth-child(3){
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="layui-bg-black">
+        <div class="layui-container">
+            <ul class="layui-nav">
+                <li class="layui-nav-item">
+                    <a href="">控制台<span class="layui-badge">9</span></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">个人中心<span class="layui-badge-dot"></span></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href=""><img src="./layui/images/timg.jpg" class="layui-nav-img">我</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">修改信息</a></dd>
+                        <dd><a href="javascript:;">安全管理</a></dd>
+                        <dd><a href="javascript:;">退了</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-container">
+            <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                      <li class="layui-this">登录</li>
+                      <li>注册</li>
+                    </ul>
+                    <div class="layui-tab-content" style="height: 100px;">
+                        <form class="layui-form layui-form-pane" action="">
+                                <div class="layui-form-item">
+                                <label class="layui-form-label">用户名</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                                </div>
+                                </div>
+                                <div class="layui-form-item">
+                                <label class="layui-form-label">密码框</label>
+                                <div class="layui-input-inline">
+                                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                                </div>
+                                <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+                                </div>
+                                <button class="layui-btn">默认按钮</button>
+                        </form>
+                      <!-- <div class="layui-tab-item layui-show">内容不一样是要有，因为你可以监听tab事件（阅读下文档就是了）</div>
+                      <div class="layui-tab-item">内容2</div>
+                      <div class="layui-tab-item">内容3</div>
+                      <div class="layui-tab-item">内容4</div>
+                      <div class="layui-tab-item">内容5</div> -->
+                    </div>
+                  </div> 
+        
+    </div>
+    <script src="./layui/layui.all.js"></script>
+</body>
+
+</html>

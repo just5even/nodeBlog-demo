@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="author", content="fengyu")
+    link(rel="stylesheet", href="/layui/css/layui.css")
+    link(rel="stylesheet", href="/css/nav.css")
+    block css
+
+    script(src="/layui/layui.js")
+  body
+    //- nav
+    include ./nav
+
+    //- content
+    block contents
+      .layui-container
+      .layui-row.layui-col-space15
+        //- 文章列表
+        .layui-col-md8
+          ul.article-list
+            each info in artList
+              li
+                a.list-face
+                  img(src=info.author.avatar, alt=info.author)
+                h2
+                  a.layui-badge= info.tips
+                  a.articlt-title.ellipsis(href=`/article/${info._id}`)= info.title
+                .list-info
+                  a= info.author.username
+                  span= info.created.toLocaleString()
+                  span.list-reply
+                    i(title="评论").layui-icon.layui-icon-file-b
+                    = info.commentNum
+          //- include ./laypage.pug
+
+    //- footer
+    include ./footer.pug
+
+    //- script
+    block scripts
